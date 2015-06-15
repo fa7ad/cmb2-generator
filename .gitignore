@@ -90,4 +90,8 @@ node_modules
 .sass-cache
 *.css.map
 
+sass
 
+sass/
+
+gulpfile.js

@@ -6,7 +6,7 @@ Save yourself some time and energy
 
 Slight modifications by [me](https://github.com/fa7ad)
 
-Originally Created by [@hasinhayder](https://github.com/hasinhayder)
+Originally Created by [@hasinhayder](https://github.com/hasinhayder)  
 Follow his blog at: [The StoryTeller](http://hasin.me)
 
 > I modified this primarily to fit my taste.  
