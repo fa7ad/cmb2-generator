@@ -1,0 +1,34 @@
+{
+  "name": "cmb2-metabox-generator",
+  "description": "This is a code generator for CMB2 Metaboxes.",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"There is nothing to test xD\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fa7ad/cmb2-metabox-generator.git"
+  },
+  "keywords": [
+    "cmb2",
+    "metabox",
+    "wordpress",
+    "generator"
+  ],
+  "author": "{}",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fa7ad/cmb2-metabox-generator/issues"
+  },
+  "homepage": "http://thewebaholic.ml/cmb2-metabox-generator#readme",
+  "devDependencies": {
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-minify-css": "^1.1.6",
+    "gulp-sass": "^2.0.1",
+    "gulp-uglify": "^1.2.0"
+  },
+  "dependencies": {
+    "gulp": "^3.9.0"
+  }
+}

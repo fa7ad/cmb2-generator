@@ -1,256 +1,291 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title>CMB2 Metabox Code Generator</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/prism.css"/>
-    <link rel="stylesheet" href="css/style.css"/>
+  <meta charset="UTF-8">
+  <title>CMB2 Metabox Code Generator</title>
+  <link
+      href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/flatly/bootstrap.min.css"
+      rel="stylesheet">
+  <link rel="stylesheet" href="css/prism.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script
+      src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 </head>
 <body>
-<a href="https://github.com/hasinhayder/cmb2-metabox-generator"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
-<div class="container hero">
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="maintitle">CMB2 Metabox Code Generator</h1>
+<a href="https://github.com/fa7ad/cmb2-metabox-generator">
+  <img
+      style="position: absolute; top: 0; right: 0; border: 0;"
+      alt="Fork me on GitHub"
+      src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 
-            <p>
-                Use this generator to create fully functional CMB2 metaboxes easily. Save your time from boring works.
-            </p>
-        </div>
+<div class="container hero">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="maintitle">CMB2 Metabox Code Generator</h1>
+
+      <p>
+        This is a code generator for CMB2 Metaboxes.
+        Use it to visually create fields and generate the code for them.
+      </p>
     </div>
+  </div>
 </div>
 
 <div class="section-dark section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>General Properties</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>General Properties</h2>
 
-                <p>
-                    Metabox properties. Use this section to define the scope of metabox, set it's id and other things.
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <form action="">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>Metabox ID</label>
-                        <input type="text" class="form-control" id="mb_id" placeholder="Metabox ID">
-                    </div>
-                    <div class="form-group">
-                        <label>Metabox Title</label>
-                        <input type="text" class="form-control" id="mb_title" placeholder="Title">
-                    </div>
-                    <div class="form-group">
-                        <label>Comma Separated Scope</label>
-                        <input value="page, post" type="text" class="form-control" id="mb_scope" placeholder="Scope">
-
-                        <p class="help-block">Where this metabox will be shown? like 'page','post' etc</p>
-                    </div>
-                    <div class="form-group">
-                        <label>Text Domain</label>
-                        <input type="text" class="form-control" id="mb_textdomain" placeholder="Text Domain">
-
-                        <p class="help-block">Optional textdomain</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>Metabox Context</label>
-                        <select id="mb_context" class="form-control">
-                            <option value="normal">Normal</option>
-                            <option value="advance">Advance</option>
-                            <option value="side">Side</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Metabox Priority</label>
-                        <select id="mb_priority" class="form-control">
-                            <option value="default">Default</option>
-                            <option value="high">High</option>
-                            <option value="core">Core</option>
-                            <option value="low">Low</option>low
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>PHP Function Name</label>
-                        <input type="text" class="form-control" id="mb_function" value="cmb2_add_metabox">
-
-                        <p class="help-block">Optional function name</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Show On Key</label>
-                                <input type="text" class="form-control" id="mb_so_key" placeholder="Show on key">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Show On Value</label>
-                                <input type="text" class="form-control" id="mb_so_value" placeholder="Show on value">
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </form>
-        </div>
+        <p>
+          Metabox properties. Use this section to define the scope of
+          metabox, set it's id and other things.
+        </p>
+      </div>
     </div>
+    <div class="row">
+      <form action="">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="mb_id">Metabox ID</label>
+              <input type="text" class="form-control" id="mb_id"
+                     placeholder="Metabox ID">
+          </div>
+          <div class="form-group">
+            <label for="mb_title">Metabox Title</label>
+              <input type="text" class="form-control" id="mb_title"
+                     placeholder="Title">
+          </div>
+          <div class="form-group">
+            <label for="mb_scope">Comma Separated Scope</label>
+              <input value="page, post" type="text"
+                     class="form-control" id="mb_scope"
+                     placeholder="Scope">
+            <p class="help-block">Where will this metabox be shown? (e.g. 'page','post' etc)</p>
+          </div>
+          <div class="form-group">
+            <label for="mb_textdomain">Text Domain</label>
+              <input type="text" class="form-control"
+                     id="mb_textdomain" placeholder="Text Domain">
+            <p class="help-block">Optional textdomain</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="mb_context">Metabox Context</label>
+              <select id="mb_context" class="form-control">
+                <option value="normal">Normal</option>
+                <option value="advance">Advance</option>
+                <option value="side">Side</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="mb_priority">Metabox Priority</label>
+              <select id="mb_priority" class="form-control">
+                <option value="default">Default</option>
+                <option value="high">High</option>
+                <option value="core">Core</option>
+                <option value="low">Low</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="mb_function">PHP Function Name</label>
+              <input type="text" class="form-control"
+                     id="mb_function"
+                     value="cmb2_add_metabox">
+            <p class="help-block">Optional function name</p>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="mb_so_key">Show On Key</label>
+                <input type="text" class="form-control"
+                       id="mb_so_key" placeholder="Show on key">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="mb_so_value">Show On Value</label>
+                <input type="text" class="form-control"
+                       id="mb_so_value"
+                       placeholder="Show on value">
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
 
 <div class="section section-lite">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Metabox Fields</h2>
-
-                <p>
-                    Generate Metabox fields from this section
-                </p>
-            </div>
-        </div>
-
-        <form action="" id="fields">
-            <div class="form-element">
-                <div class="row">
-                    <div class="col-md-1">
-                        <label>&nbsp;</label><br/>
-                        <a class="btn btn-sm btn-warning move-up" href=""><i class="glyphicon glyphicon-arrow-up"></i></a>
-                        <a class="btn btn-sm btn-warning move-down" href=""><i class="glyphicon glyphicon-arrow-down"></i></a>
-                    </div>
-                    <div class="col-md-2">
-                        <label>Field ID</label>
-                        <input type="text" class="form-control mb_field_id">
-                    </div>
-                    <div class="col-md-2">
-                        <label>Type</label>
-                        <select class="form-control mb_field_type">
-                            <option value="0">Select a type</option>
-                            <option value="title">Title</option>
-                            <option value="text">Text</option>
-                            <option value="text_small">Text Small</option>
-                            <option value="text_medium">Text Medium</option>
-                            <option value="text_email">Text Email</option>
-                            <option value="text_url">Text URL</option>
-                            <option value="text_money">Text Money</option>
-                            <option value="textarea">Textarea</option>
-                            <option value="textarea_small">Textarea Small</option>
-                            <option value="textarea_code">Textarea Code</option>
-                            <option value="textarea_date">Textarea Date</option>
-                            <option value="select_timezone">Select Timezone</option>
-                            <option value="text_date_timestamp">Text Date Timestamp</option>
-                            <option value="text_datetime_timestamp">Text Datetime Timestamp</option>
-                            <option value="text_datetime_timestamp_timezone">Serialized DateTime object</option>
-                            <option value="colorpicker">Colorpicker</option>
-                            <option value="radio">Radio</option>
-                            <option value="radio_inline">Radio Inline</option>
-                            <option value="taxonomy_radio">Taxonomy Radio</option>
-                            <option value="taxonomy_radio_inline">Taxonomy Radio Inline</option>
-                            <option value="select">Select</option>
-                            <option value="taxonomy_select">Taxonomy Select</option>
-                            <option value="checkbox">Checkbox</option>
-                            <option value="multicheck">Multi Checkbox</option>
-                            <option value="multicheck_inline">Multi Checkbox Inline</option>
-                            <option value="wysiwyg">WYSIWYG</option>
-                            <option value="file">Image/File Uploader</option>
-                            <option value="file_list">Image/File list upload</option>
-                            <option value="oembed">Converts oembed urls</option>
-                            <option value="group">Group</option>
-                        </select>
-                    </div>
-                    <div class="col-md-3">
-                        <label>Title</label>
-                        <input type="text" class="form-control mb_field_title">
-                    </div>
-                    <div class="col-md-2">
-                        <label>Default value</label>
-                        <input type="text" class="form-control mb_field_default">
-                    </div>
-                    <div class="col-md-2">
-                        <label>&nbsp;</label><br/>
-                        <a class="btn btn-success add-more" href=""> + </a>
-                        <a class="btn btn-danger remove" href=""> X </a>
-                    </div>
-                </div>
-            </div>
-        </form>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="generate">
-                    <a class="btn btn-success code-generator" href="#">Generate Code</a>
-                </div>
-            </div>
-        </div>
-
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Metabox Fields</h2>
+        <p>
+          Generate Metabox fields from this section
+        </p>
+      </div>
     </div>
+
+    <form action="" id="fields">
+      <div class="form-element">
+        <div class="row">
+          <div class="col-md-1">
+            <div class="btn-group-vertical btn-group-md" role="group">
+              <button type="button" class="btn move-up btn-warning"><i
+                  class="glyphicon glyphicon-arrow-up"></i></button>
+              <button type="button" class="btn move-down btn-warning"><i
+                  class="glyphicon glyphicon-arrow-down"></i></button>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <label for="mb_field_id">Field ID</label>
+              <input type="text" class="form-control mb_field_id" id="mb_field_id"/>
+          </div>
+          <div class="col-md-2">
+            <label for="mb_field_type">Type</label>
+              <select class="form-control mb_field_type" id="mb_field_type">
+                <option value="0">Select a type</option>
+                <option value="title">Title</option>
+                <option value="text">Text</option>
+                <option value="text_small">Text Small</option>
+                <option value="text_medium">Text Medium</option>
+                <option value="text_email">Text Email</option>
+                <option value="text_url">Text URL</option>
+                <option value="text_money">Text Money</option>
+                <option value="textarea">Textarea</option>
+                <option value="textarea_small">Textarea Small</option>
+                <option value="textarea_code">Textarea Code</option>
+                <option value="textarea_date">Textarea Date</option>
+                <option value="select_timezone">Select Timezone</option>
+                <option value="text_date_timestamp">Text Date Timestamp</option>
+                <option value="text_datetime_timestamp">Text DateTime
+                  Timestamp
+                </option>
+                <option value="text_datetime_timestamp_timezone">Serialized
+                  DateTime object
+                </option>
+                <option value="colorpicker">Colorpicker</option>
+                <option value="radio">Radio</option>
+                <option value="radio_inline">Radio Inline</option>
+                <option value="taxonomy_radio">Taxonomy Radio</option>
+                <option value="taxonomy_radio_inline">Taxonomy Radio Inline
+                </option>
+                <option value="select">Select</option>
+                <option value="taxonomy_select">Taxonomy Select</option>
+                <option value="checkbox">Checkbox</option>
+                <option value="multicheck">Multi Checkbox</option>
+                <option value="multicheck_inline">Multi Checkbox Inline</option>
+                <option value="wysiwyg">WYSIWYG</option>
+                <option value="file">Image/File Uploader</option>
+                <option value="file_list">Image/File list upload</option>
+                <option value="oembed">Converts oembed urls</option>
+                <option value="group">Group</option>
+              </select>
+          </div>
+          <div class="col-md-3">
+            <label for="mb_field_title">Title</label>
+              <input type="text" class="form-control mb_field_title" id="mb_field_title">
+          </div>
+          <div class="col-md-2">
+            <label for="mb_field_default">Default value</label>
+              <input type="text"
+                     class="form-control mb_field_default" id="mb_field_default">
+          </div>
+          <div class="col-md-2">
+            <div class="btn-group btn-group-lg" role="group">
+              <button type="button" class="btn btn-success add-more">&plus;</button>
+              <button type="button" class="btn btn-danger remove">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="generate">
+          <button class="btn btn-success code-generator">Generate
+            Code</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 <div class="section-dark section" id="codecontainer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Generated Code</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Generated Code</h2>
 
-                <p>
-                    Now you're happy, eh? Just copy-paste from these boxes below and go back to work, pronto!
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div id="code">
-                    &nbsp;
-                </div>
-            </div>
-        </div>
+        <p>
+          Happy now? Just copy-paste from these boxes below
+          and go back to work, pronto!
+        </p>
+      </div>
     </div>
-</div>
-<div class="section">
-
+    <div class="row">
+      <div class="col-md-12">
+        <div id="code">
+          &nbsp;
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- HTML element for option params when we select multicheck, multicheck_inline, radio, radio_inline and select field types  -->
 <div class="hidden" id="option-param-elem">
-    <div class="row option-param">
-        <div class="col-md-3">
-            <h4 class="text-right">options</h4>
-        </div>
-        <div class="col-md-2">
-            <select class="form-control opt-param-type">
-                <option value="array" selected>Array</option>
-                <option value="callback">Callback</option>
-            </select>
-        </div>
-        <div class="col-md-1 text-center" data-opt-type="array">
-            <a href="#move-up" class="btn btn-warning btn-xs opt-move-up" title="Move Up"><i class="glyphicon glyphicon-arrow-up"></i></a>
-            <a href="#move-down" class="btn btn-warning btn-xs opt-move-down" title="Move Down"><i class="glyphicon glyphicon-arrow-down"></i></a>
-        </div>
-        <div class="col-md-2" data-opt-type="array">
-            <input type="text" class="form-control opt-key" placeholder="key">
-        </div>
-        <div class="col-md-2" data-opt-type="array">
-            <input type="text" class="form-control opt-val" placeholder="value">
-        </div>
-        <div class="col-md-5 hidden" data-opt-type="callback">
-            <input type="text" class="form-control opt-callback" placeholder="callback function name">
-        </div>
-        <div class="col-md-2" data-opt-type="array">
-            <a class="btn btn-success btn-xs opt-add" href="#add-more" title="Add more">+</a>
-            <a class="btn btn-danger btn-xs opt-remove" href="#remove-this" title="Remove this">×</a>
-        </div>
+  <div class="row option-param">
+    <div class="col-md-3">
+      <h4 class="text-right">Options</h4>
     </div>
-</div><!-- #option-param-elem -->
+    <div class="col-md-2">
+      <select class="form-control opt-param-type" title="Parameter Type">
+        <option value="array" selected="selected">Array</option>
+        <option value="callback">Callback</option>
+      </select>
+    </div>
+    <div class="col-md-1 text-center btn-group btn-group-sm" data-opt-type="array">
+      <button class="btn btn-warning opt-move-up"
+         title="Move Up"><i
+          class="glyphicon glyphicon-arrow-up"></i></button>
+      <button class="btn btn-warning opt-move-down"
+         title="Move Down"><i
+          class="glyphicon glyphicon-arrow-down"></i></button>
+    </div>
+    <div class="col-md-2" data-opt-type="array">
+      <input type="text" class="form-control opt-key" placeholder="Key">
+    </div>
+    <div class="col-md-2" data-opt-type="array">
+      <input type="text" class="form-control opt-val" placeholder="Value">
+    </div>
+    <div class="col-md-5 hidden" data-opt-type="callback">
+      <input type="text" class="form-control opt-callback"
+             placeholder="Callback function name">
+    </div>
+    <div class="col-md-2 btn-group btn-group-sm" data-opt-type="array">
+      <button class="btn btn-success opt-add"
+         title="Add more">&plus;</button>
+      <button class="btn btn-danger opt-remove"
+         title="Remove this">&times;</button>
+    </div>
+  </div>
+</div>
+<!-- #option-param-elem -->
 
 <div class="section footer">
-    <p>Built with Love by Hasin Hayder & Other Contributors</p>
+  <p>Built with <i class="text-danger glyphicon glyphicon-heart"></i> by Hasin Hayder & Other Contributors</p>
 </div>
-<script src="//code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js" type="text/javascript"></script>
-<script src="js/prism.js" type="text/javascript"></script>
-<script src="js/script.js" type="text/javascript"></script>
+<script
+    src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/prism.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
