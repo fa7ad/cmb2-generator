@@ -2,6 +2,7 @@ body {
   padding-top: 40px;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
+  background-color: #ffbb22;
 }
 
 .maintitle {
@@ -9,14 +10,21 @@ body {
 }
 
 .section {
-//  margin-top: 20px;
+  //  margin-top: 20px;
   padding: 50px 0;
   &-dark {
     background-color: #333;
-    color: #eeeeee;
+    &#codecontainer {
+      h1, h2, h3 {
+        color: #fff;
+      }
+    }
   }
   &-lite {
     background-color: #eee;
+  }
+  &-bright {
+    background-color: #fff;
   }
   h2 {
     font-size: 20px;
@@ -65,20 +73,20 @@ form {
   margin-top: 10px;
 }
 
-.form-element{
-  .option-param{
-    h4, .opt-param-type{
+.form-element {
+  .option-param {
+    h4, .opt-param-type {
       display: none;
     }
     .opt-add {
       display: none;
     }
-    .btn-warning{
+    .btn-warning {
       margin-top: 10px;
     }
   }
-  .option-param:nth-child(2){
-    h4, .opt-param-type{
+  .option-param:nth-child(2) {
+    h4, .opt-param-type {
       display: block;
     }
   }
