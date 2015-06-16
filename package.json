@@ -16,7 +16,16 @@
     "wordpress",
     "generator"
   ],
-  "author": "{}",
+  "author": [
+    {
+      "name": "Fahad Hossain",
+      "email": "8bit.demoncoder@gmail.com"
+    },
+    {
+       "name": "Hasin Hayder",
+       "email": "countdraculla@gmail.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/fa7ad/cmb2-metabox-generator/issues"
