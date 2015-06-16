@@ -23,7 +23,9 @@
       e.preventDefault();
       if ( confirm( "Are you sure to delete?" ) ) {
         $( this ).parents( ".form-element" ).remove();
-        $( this ).parents( '.btn-group-lg' ).addClass( 'btn-group' );
+        $( '.btn-group-lg' ).each(function(){
+          $( this ).addClass( 'btn-group' );
+        });
         $( "#fields .form-element:last" ).find( ".add-more" ).show();
       }
     } ).on( 'click', '.move-up', function ( e ) {
@@ -100,7 +102,9 @@
 
       if ( confirm( "Are you sure to delete?" ) ) {
         $( this ).parents( '.option-param' ).remove();
-        $( this ).parents( '.btn-group-sm' ).addClass( 'btn-group' );
+        $( '.btn-group-sm' ).each(function(){
+          $( this ).addClass( 'btn-group' );
+        });
 
       }
     } );
