@@ -95,3 +95,5 @@ sass
 sass/
 
 gulpfile.js
+
+package.json
