@@ -36,7 +36,7 @@
   },
   "homepage": "http://thewebaholic.ml/cmb2-metabox-generator#readme",
   "devDependencies": {
-    "chalk": "^1.1.0",
+    "chalk": "^2.4.2",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-coffee": "^3.0.3",
     "gulp-concat": "^2.5.2",
